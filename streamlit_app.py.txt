@@ -1,0 +1,22 @@
+import streamlit as st
+import time
+
+# Dark theme styling
+st.markdown("""
+<style>
+body { background-color: #121212; color: #f0f0f0; font-family: sans-serif; }
+.stButton>button { background-color: #333; color: #f0f0f0; border: none; padding: 10px 20px; border-radius: 6px; }
+.stButton>button:hover { background-color: #444; }
+</style>
+""", unsafe_allow_html=True)
+
+st.title("🌙 Good Vibes Only")
+if st.button("Start My Day"):
+    with st.spinner("Loading..."):
+        time.sleep(1.5)
+    st.success("✨ You are awesome.")
+    time.sleep(1)
+    st.info("💪 You can handle anything.")
+    time.sleep(1)
+    st.balloons()
+    st.write("🌈 Smile, breathe, and have a **good day** 😊")
